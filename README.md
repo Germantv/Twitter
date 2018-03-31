@@ -1,4 +1,4 @@
-# Project 5 - *Name of App Here*
+# Project 5 - *Twitter*
 
 **Twitter** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
