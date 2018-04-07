@@ -24,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.window?.rootViewController = loginVC
         }
+        //check to see if there is a current user
+        if User.current != nil {
+            //if user logged in, take to home timeline screen
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let TabbarViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+            window?.rootViewController = TabbarViewController
+        }
         
         return true
     }
