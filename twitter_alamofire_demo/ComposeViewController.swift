@@ -24,6 +24,15 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
 
         tweetText.delegate = self
         tweetText.isEditable = true
+        tweetText.layer.borderWidth = 5.0
+        tweetText.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        tweetText.layer.cornerRadius = 5
+        
+        profileImage.af_setImage(withURL: (User.current?.profileImage)!)
+        profileImage.layer.cornerRadius = 55
+        profileImage.clipsToBounds = true
+        userName.text = User.current?.name
+        handle.text = User.current?.screenName
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

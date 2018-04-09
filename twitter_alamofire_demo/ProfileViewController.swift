@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         bannerImageView.af_setImage(withURL: (User.current?.banner_url)!)
         profileImageView.af_setImage(withURL: (User.current?.profileImage)!)
-        profileImageView.layer.cornerRadius = 60
+        profileImageView.layer.cornerRadius = 55
         profileImageView.clipsToBounds = true
         nameLabel.text = User.current?.name
         screenNameLabel.text = User.current?.screenName

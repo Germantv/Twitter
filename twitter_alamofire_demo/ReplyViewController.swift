@@ -39,6 +39,9 @@ class ReplyViewController: UIViewController, UITextViewDelegate {
 
         replyText.delegate = self
         replyText.isEditable = true
+        replyText.layer.borderWidth = 5.0
+        replyText.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        replyText.layer.cornerRadius = 5
     }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
